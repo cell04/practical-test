@@ -286,15 +286,22 @@ class TweetsController extends Controller
 
     /**
     *   @OA\Get(
-    *       path="/tweets/users-followed-tweets",
-    *       description="Show followed users tweets",
+    *   path="/tweets/{id}",
+    *   description="Show followed users tweets",
     *       summary="List Followed Users Tweets",
-    *       operationId="showFollowedUsersTweets",
-    *       tags={"Tweets"},
+    *   operationId="showFollowedUsersTweets",
+    *   tags={"Tweets"},
+    *       @OA\Parameter(
+    *           in="path",
+    *           name="id",
+    *           required=true,
+    *           @OA\Schema(type="number"),
+    *           @OA\Examples(example="id", value="1", summary="An ID value."),
+    *       ),
     *       @OA\Response(
     *           response=200,
-    *           description="Success"
-    *       )
+    *           description="Success",
+    *       ),
     *   )
     */
     public function followedTweets()
