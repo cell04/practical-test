@@ -49,8 +49,24 @@
                     }
                 },
                 "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
                     "422": {
-                        "description": "Unauthorized"
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Not authorized"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -238,7 +254,7 @@
                     }
                 },
                 "responses": {
-                    "200": {
+                    "201": {
                         "description": "Success"
                     },
                     "422": {
@@ -301,7 +317,7 @@
                     }
                 ],
                 "responses": {
-                    "200": {
+                    "202": {
                         "description": "Success"
                     }
                 }
@@ -350,7 +366,7 @@
                     }
                 },
                 "responses": {
-                    "200": {
+                    "202": {
                         "description": "Success"
                     },
                     "422": {
@@ -404,7 +420,7 @@
                     }
                 },
                 "responses": {
-                    "200": {
+                    "201": {
                         "description": "Success"
                     },
                     "422": {
@@ -452,11 +468,26 @@
                     }
                 ],
                 "responses": {
-                    "200": {
+                    "202": {
                         "description": "Success"
                     },
                     "402": {
                         "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/tweets/users-followed-tweets": {
+            "get": {
+                "tags": [
+                    "Tweets"
+                ],
+                "summary": "List Followed Users Tweets",
+                "description": "Show followed users tweets",
+                "operationId": "showFollowedUsersTweets",
+                "responses": {
+                    "200": {
+                        "description": "Success"
                     }
                 }
             }
@@ -536,7 +567,7 @@
                     }
                 },
                 "responses": {
-                    "200": {
+                    "201": {
                         "description": "Success"
                     },
                     "422": {
@@ -599,7 +630,7 @@
                     }
                 ],
                 "responses": {
-                    "200": {
+                    "202": {
                         "description": "Success"
                     }
                 }
@@ -648,7 +679,7 @@
                     }
                 },
                 "responses": {
-                    "200": {
+                    "202": {
                         "description": "Success"
                     },
                     "422": {
@@ -746,7 +777,7 @@
                     }
                 },
                 "responses": {
-                    "200": {
+                    "202": {
                         "description": "Success"
                     },
                     "422": {
@@ -800,7 +831,7 @@
                     }
                 },
                 "responses": {
-                    "200": {
+                    "202": {
                         "description": "Success"
                     },
                     "422": {
