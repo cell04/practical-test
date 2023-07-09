@@ -287,7 +287,7 @@ class TweetsController extends Controller
     /**
     *   @OA\Get(
     *       path="/tweets/users-followed-tweets",
-    *       description="Show followed users tweets",
+    *       description="Show followed users tweet",
     *       summary="List Followed Users Tweets",
     *       operationId="showFollowedUsersTweets",
     *       tags={"Tweets"},
